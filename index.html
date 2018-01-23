@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mat Dialog Component - Custom Element</title>
+  <style>
+    mat-toast {
+      background-color: #323232;
+      color: white;
+      border-radius: 2px;
+      margin-top: 10px;
+      line-height: 1.5rem;
+      padding: 10px 25px;
+      font-size: 1.1rem;
+      font-weight: 300;
+      position: fixed;
+      left: 20px;
+      bottom: 20px;
+      transform: translateY(200%);
+      transition: transform .5s;
+    }
+
+    mat-toast[open] {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  
+  <mat-button>Open Dialog</mat-button>
+  <mat-toast>
+    Hey, How are you?
+  </mat-toast>
+  <script src="mat-button.js"></script>
+  <script src="mat-toast.js"></script>
+</body>
+</html>
