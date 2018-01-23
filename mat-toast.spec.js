@@ -19,10 +19,7 @@ describe('Material Toast Element', () => {
 
   it('Should render', async () => {
     await page.waitForSelector("mat-toast");
-    const toastEl = await page.evaluate(() => {
-      return document.querySelector('mat-toast');
-    });
-
+    const toastEl = await page.$eval('mat-toast', el => el);
     expect(toastEl).not.toBeNull()
   })
    
