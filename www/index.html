@@ -23,7 +23,15 @@
     }
 
     mat-toast[open] {
-      transform: translateY(0);
+      animation: toastShow 7s;
+    }
+
+    @keyframes toastShow {
+      0% { transform: translateY(200%); }
+      10% { transform: translateY(0); }
+      50% { transform: translateY(0); }
+      90% { transform: translateY(0); }
+      100% { transform: translateY(200%); }
     }
   </style>
 </head>
@@ -35,5 +43,13 @@
   </mat-toast>
   <script src="mat-button.js"></script>
   <script src="mat-toast.js"></script>
+  <script>
+    const btn = document.querySelector('mat-button')
+    const toast = document.querySelector('mat-toast')
+    btn.addEventListener('click', () => {
+      if(toast.open) return;
+      toast.show();
+    })
+  </script>
 </body>
 </html>

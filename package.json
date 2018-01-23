@@ -1,0 +1,21 @@
+{
+  "name": "testing-toast-custom-element",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "concurrently -s first --kill-others 'superstatic www' 'jest'"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.1.0",
+    "babel-preset-env": "^1.6.1",
+    "concurrent": "^0.3.2",
+    "jest": "^22.1.4",
+    "puppeteer": "^1.0.0",
+    "superstatic": "^5.0.1"
+  }
+}
